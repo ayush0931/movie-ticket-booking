@@ -1,6 +1,7 @@
 import React from 'react'
 import HeroSection from '../component/HeroSection'
 import FeaturedSection from '../component/FeaturedSection'
+import TrailerSection from '../component/TrailerSection'
 
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
     <div>
       <HeroSection/>
       <FeaturedSection/>
+      <TrailerSection/>
       
       
     </div>
