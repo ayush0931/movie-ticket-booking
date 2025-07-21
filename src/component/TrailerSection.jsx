@@ -4,26 +4,24 @@ import ReactPlayer from 'react-player'
 import BlurCircle from './BlurCircle'
 import { PlayCircle } from 'lucide-react'
 
-const TrailerSection = () => {
+const TrailersSection = () => {
   const [currentTrailer, setCurrentTrailer] = useState(dummyTrailers[0])
 
   return (
     <div className='px-6 md:px-16 lg:px-24 xl:px-44 py-20 overflow-hidden'>
-      <p className='text-gray-300 font-medium text-lg max-w-[960px]'>Trailers</p>
-      <div className='relative mt-4'>
-        <BlurCircle top='100px' right='-100px'/>
-        <ReactPlayer 
-        
+      <p className='text-gray-300 font-medium text-lg max-w-[960px] mx-auto'>Trailers</p>
 
-          url={currentTrailer.videoUrl} 
-          playing={true}
+
+      <div className='relative mt-6'>
+        <BlurCircle top ='-100px' right ='-100px'/>
+        <ReactPlayer 
+          src={currentTrailer.videoUrl} 
           controls={false}
           className="mx-auto max-w-full" 
           width="960px" 
-          height="540px"
-        />
-        
+          height="540px"/> 
       </div>
+      
       <div className='group grid grid-cols-4 gap-4 md:gap-8 mt-8 max-w-3xl mx-auto'>
               {dummyTrailers.map((trailer)=>(
 
@@ -42,4 +40,4 @@ const TrailerSection = () => {
   )
 }
 
-export default TrailerSection;
+export default TrailersSection;
