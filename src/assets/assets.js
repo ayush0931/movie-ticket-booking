@@ -56,16 +56,17 @@ const dummyCastsData = [
 
 export const dummyShowsData = [
     {
-        "_id": "324544",
+        "_id":" 324544",
         "id": 324544,
         "title": "In the Lost Lands",
         "overview": "A queen sends the powerful and feared sorceress Gray Alys to the ghostly wilderness of the Lost Lands in search of a magical power, where she and her guide, the drifter Boyce, must outwit and outfight both man and demon.",
-        "poster_path": "https://image.tmdb.org/t/p/original/dDlfjR7gllmr8HTeN6rfrYhTdwX.jpg",
+        "poster_path": "https://image.tmdb.org/t/p/w500/1E5baAaEse26fej7uHcjOgEE2t2.jpg",
         "backdrop_path": "https://image.tmdb.org/t/p/original/op3qmNhvwEvyT7UFyPbIfQmKriB.jpg",
         "genres": [
             { "id": 28, "name": "Action" },
             { "id": 14, "name": "Fantasy" },
             { "id": 12, "name": "Adventure" }
+        
         ],
         "casts": dummyCastsData,
         "release_date": "2025-02-27",

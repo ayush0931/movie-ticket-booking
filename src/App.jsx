@@ -3,8 +3,8 @@ import Navbar from './component/Navbar'
 import {Route, Routes, useLocation} from 'react-router-dom'
 import Home from './pages/Home'
 import Favorite from './pages/Favorite'
-import Movie from './pages/Movie'
-import MovieDetail from './pages/MovieDetail'
+import Movies from './pages/Movies'
+import MovieDetails from './pages/MovieDetails'
 import SeatLayout from './pages/SeatLayout'
 import MyBookings from './pages/MyBookings'
 import Footer from './component/Footer'
@@ -17,11 +17,11 @@ const App = () => {
     {Toaster}
       {!isAdminRoute && <Navbar/>}
        <Routes>
-      <Route path='/'  element={<Home/>} />
-       <Route path='/seatLayout'  element={<SeatLayout/>} />
+      <Route path='/'  element={<Home/>} />   
       <Route path='/favorite'  element={<Favorite/>} />
-      <Route path='/movies'  element={<Movie/>} />
-      <Route path='/movieDetail'  element={<MovieDetail/>} />
+      <Route path='/movies'  element={<Movies/>} />
+      <Route path='/movies/:id'  element={<MovieDetails/>} />
+         <Route path='/movies/:id/:date'  element={<SeatLayout/>} />
       <Route path='/mybooking'  element={<MyBookings/>} />
       </Routes>
        {!isAdminRoute && <Footer/>}
