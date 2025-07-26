@@ -14,15 +14,15 @@ const App = () => {
   const isAdminRoute = useLocation().pathname.startsWith('/admin')
   return (
     <>
-    <Toaster  position="top-center"/>
+    <Toaster/>
       {!isAdminRoute && <Navbar/>}
        <Routes>
       <Route path='/'  element={<Home/>} />   
-      <Route path='/favorite'  element={<Favorite/>} />
       <Route path='/movies'  element={<Movies/>} />
       <Route path='/movies/:id'  element={<MovieDetails/>} />
          <Route path='/movies/:id/:date'  element={<SeatLayout/>} />
-      <Route path='/mybooking'  element={<MyBookings/>} />
+      <Route path='/My-bookings'  element={<MyBookings/>} />
+      <Route path='/favorite'  element={<Favorite/>} />
       </Routes>
        {!isAdminRoute && <Footer/>}
     </>

@@ -16,11 +16,11 @@ import Loading from '../component/Loading'
 const MovieDetails = () => {
 const navigate = useNavigate()
 
-  const {_id} = useParams()
+  const {id} = useParams()
   const [show, setShow] = useState(null)
 
   const getShow = async ()=>{
-    const show = dummyShowsData.find(show=>show._===_id)
+    const show = dummyShowsData.find(show=>show._id===id)
     if(show){
   setShow({
       movie:show,
@@ -32,10 +32,10 @@ const navigate = useNavigate()
 
   useEffect(()=>{
     getShow()
-  },[_id])
+  },[id])
 
   return show ? (
-    <div className='px-6 md:px-6 lg:px-40 pt-30 md:pt-50'>
+    <div className='px-6 md:px-16 lg:px-40 pt-30 md:pt-50'>
       <div className='flex flex-col md:flex-row gap-8 max-w-6xl mx-auto'>
     <img src={show.movie.poster_path} alt="" className='max-md:mx-auto rounded-xl h-104 
         max-w-70 object-cover'/>
@@ -85,7 +85,7 @@ const navigate = useNavigate()
         </div>
 
       </div>
-      <DateSelect dateTime={show.dateTime} id={_id}/>
+      <DateSelect dateTime={show.dateTime} id={id}/>
 
       <p className='tex-lg mt-20 font-medium mb-8'>You May Also Like</p>
           <div className='flex flex-wrap justify-center gap-8 max-sm'>
